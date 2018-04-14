@@ -1,0 +1,175 @@
+@charset "utf-8";
+/*
+ *	all
+ */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body, article, .page{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	position: relative;
+}
+
+
+/*
+ *	nav
+ */
+nav{
+	top: 0;
+	text-align: center;
+	position: fixed;
+	background-color: white;
+	min-width: 3rem;
+	height: 100%;
+	z-index: 100;
+}
+nav>ul{
+	writing-mode: vertical-rl;
+	width: 100%;
+	height: 100%;
+	line-height: 3rem;
+}
+nav li{
+	height: 20%;
+	float: left;
+	list-style: none;
+}
+nav li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/*
+ *	page
+ */
+
+.page{
+	height: 100vh;
+	margin-left: 3rem;
+	position: relative;
+}
+.right_box, .left_box{
+	display: block;
+	position: absolute;
+	height: 100%;
+	overflow: hidden;
+}
+.right_box{
+	width: 50vw;
+	left: 47vw;
+	background-color: white;
+}
+.left_box{
+	width: 47vw;
+	left: 0;
+}
+
+@media screen and (max-width: 1000px){
+	.page, .page .right_box, .page .left_box{
+		position: static;
+		width: 100%;
+		background-color: rgba(0,0,0,0);
+	}
+	.page[id*="me"]{
+		background-color: #11ff55;
+	}
+	.page[id*="fav"]{
+		background-color: #F4D448;
+	}
+}
+
+
+/*
+ *	1
+ */
+.page[id*="top"]{
+}
+nav a[href*="#top"]{
+	color: gray;
+}
+
+/*
+ *	2
+ */
+.page[id*="me"]{
+	background-color: #11ff55;
+}
+nav a[href*="#me"]{
+	background-color: #11ff55;
+}
+
+/*
+ *	3
+ */
+.page[id*="fav"]{
+	background-color: #F4D448;
+}
+
+nav a[href*="#fav"]{
+	background-color: #F4D448;
+}
+
+/*
+ *	4
+ */
+.page[id*="develop"]{
+	z-index: 40;
+	background-color: #308397;
+}
+
+nav a[href*="#develop"]{
+	background-color: #308397;
+}
+
+/*
+ *	5
+ */
+.page[id*="contact"]{
+	background-color: #F49D48;
+}
+nav a[href*="#contact"]{
+	background-color:  #F49D48;
+}
+
+
+/*
+ *	page_etc
+ */
+.top_box, .bottom_box{
+	width: 100%;
+	height: 50%;
+}
+
+
+
+/*
+ *	header
+ */
+
+/*
+ *	foot
+ */
+header, footer{
+	margin: 0 !important;
+	background-color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+header{
+	z-index: 90;
+}
+footer h1{
+	font-size: 3rem;
+	line-height: 30rem;
+}
